@@ -58,119 +58,119 @@
     {
         "id": 9,
         "name": "Halo: Reach",
-        "description": "Halo Reach",
+        "description": "Halo: Reach is a 2010 first-person shooter developed by Bungie and published by Microsoft Game Studios, originally for the Xbox 360. The fifth installment in the Halo series and a direct prequel to Halo: Combat Evolved, Reach was released worldwide in September 2010. The game takes place in the year 2552, where humanity is locked in a war with the alien Covenant. Players control Noble Six, a member of an elite supersoldier squad, when the human world known as Reach falls under Covenant attack.\n\nAfter releasing Halo 3 in 2007, Bungie split into teams to develop two different games—what would become Halo 3: ODST and Reach. The developers decided to create a prequel to the original Halo game trilogy, freeing themselves from the obligation of addressing old story threads. As the game would take place on a human world doomed to be destroyed, they focused on making the environment a character unto itself. Longtime Halo composers Martin O'Donnell and Michael Salvatori returned to compose Reach's music, aiming for a more somber sound to match the story.\n\nReach was announced at the Electronic Entertainment Expo 2009 in Los Angeles, California, and the first in-engine trailer was shown at the 2009 Spike Video Game Awards. Players who purchased ODST were eligible to participate in a Reach multiplayer beta in May 2010; the beta allowed Bungie to gain player feedback for fixing bugs and making gameplay tweaks before shipping the final version. Microsoft gave Reach its biggest game marketing budget yet and created award-winning live-action commercials, action figures, and interactive media to promote the game.",
         "imageName": "halo_reach",
         "price": 1.10
     },
     {
         "id": 10,
         "name": "Halo 3: ODST",
-        "description": "Halo 3 ODST",
+        "description": "Halo 3: ODST is a 2009 first-person shooter game developed by Bungie and published by Microsoft Game Studios. The fourth installment in the Halo franchise, it was released on the Xbox 360 in September 2009. Players assume the roles of United Nations Space Command soldiers, known as \"Orbital Drop Shock Troopers\" or ODSTs, during and after the events of Halo 2. In the game's campaign mode, players explore the ruined city of New Mombasa to discover what happened to their missing teammates in the midst of an alien invasion. In the \"Firefight\" multiplayer option, players battle increasingly difficult waves of enemies to score points and survive as long as possible; Halo 3's multiplayer is contained on a separate disc packaged with ODST.\n\nBungie initially conceived ODST as a small side project to produce in the lull between Halo 3's completion and Halo: Reach. Instead of featuring recognizable characters such as armored protagonist Master Chief, the developers focused on the ODSTs. Story director Joseph Staten penned a detective story utilizing film noir designs, settings, and characters. Composer Martin O'Donnell abandoned his previous Halo themes to create a quieter, jazz-influenced sound. During development, the planned expansion grew in scope to that of a full-sized game. Release marketing for the game included a tie-in comic, live-action trailers, and print and web advertisements.",
         "imageName": "halo_3_odst",
         "price": 0.80
     },
     {
         "id": 11,
         "name": "Halo 4: Master Chief",
-        "description": "Halo 4 Master Chief",
+        "description": "Master Chief Petty Officer John-117, or \"Master Chief\", is a fictional character and the protagonist in the Halo multimedia franchise. Master Chief is a playable character in the series of military science fiction first-person shooter video games Halo: Combat Evolved, Halo 2, Halo 3, Halo 4, Halo 5: Guardians and Halo Infinite. The character also appears in Halo books and graphic novels – including Halo: The Fall of Reach, Halo: The Flood, Halo: First Strike, and Halo: Uprising – and has minor appearances or cameos in other Halo media.\n\nThe Master Chief is a towering supersoldier known as a \"Spartan\", raised and trained from childhood for combat. He is almost faceless and rarely seen without his green-colored armor and helmet. He is commonly referred to by his naval rank rather than his given birth name. The character is voiced by Steve Downes, a former Chicago disc jockey, in the video games in which he appears. Downes based his personification of the Chief on an initial character sketch, which called for a Clint Eastwood–type character of few words. With each new appearance, the character's visual design underwent revamping or updates.\n\nThe Master Chief serves as a mascot for Halo and the Xbox brand. The character has received a generally positive reception; while some critics have described the Chief's silent and faceless nature as a character weakness, other publications have suggested these attributes better allow players to inhabit the character. Criticism of the Master Chief's lessened role in Halo 5 led to the developers refocusing on him for the upcoming video game Halo Infinite.",
         "imageName": "halo_4_master_chief",
         "price": 2.10
     },
     {
         "id": 12,
         "name": "Rocket League: Kick Off",
-        "description": "Rocket League Kick Off",
+        "description": "Before you practice the fast kickoff, you must first know a few things (don't feel offended if it sounds trivial to start, but it gets better the longer I go on): Boosting is a transitional speed gaining mechanic, which increases your acceleration. It is the fastest way to get to supersonic by its lonesome.\n\n Dodging (the double jump flip) is an instant speed gaining mechanic, which increases your speed instantly. It has a recovery time which takes a fair portion of time. This recovery time is landing on your wheels to be able to dodge again. This is the second fastest way to get to supersonic by its lonesome, but it takes a full 1.5 seconds (or more) than Boosting.",
         "imageName": "rocket_league_kick_off",
         "price": 0.90
     },
     {
         "id": 13,
         "name": "Rocket League: Goal",
-        "description": "Rocket League Goal",
+        "description": "he most goals scored in a game of Rocket League is 142, and was achieved by Joseph Balocca II (USA) in Vacaville, California, USA, on 15 February 2021. Joseph beat the previous record by 1, scoring his final goal with just seconds left on the clock.",
         "imageName": "rocket_league_goal",
         "price": 0.70
     },
     {
         "id": 14,
         "name": "Rocket League: Epic Save",
-        "description": "Rocket League Epic Save",
+        "description": "An epic save is when it is about to go into the goal and you save it either as a part of the ball has crossed the goal line or when the ball is just about to cross the goal line. An ordinary save is when the ball has entered the goalie box marked on the floor.",
         "imageName": "rocket_league_epic_save",
         "price": 0.60
     },
     {
         "id": 15,
         "name": "Rocket League: Rocket Boost",
-        "description": "Rocket League Rocket Boost",
+        "description": "Rocket boosts are a customization option in Rocket League. They shoot out of the back of the vehicle when using boost, and depending on the car equipped, either shoot out in a single or double trail. Rocket boosts record the time of boost used while equipped. Prior to July 5, 2017, rocket boosts were known as \"rocket trails\". They were renamed to avoid confusion with the new supersonic trails. Rocket boosts listed here are unlocked simply by completing a certain amount of matches. Standard Red, Blue, Pink, Purple and Yellow are already unlocked at the beginning of the game.\n\nOn August 3, 2017, Psyonix introduced painted variants of some common boosts, which are classified as import rarity and can be obtained via the trading system.",
         "imageName": "rocket_league_rocket_boost",
         "price": 1.00
     },
     {
         "id": 16,
         "name": "Star Wars: BB8",
-        "description": "Star Wars BB8",
+        "description": "BB-8, sometimes spelled and pronounced Beebee-Ate and nicknamed BB, was a BB-series astromech droid who operated approximately thirty years after the Battle of Endor. He had a dome head, similar to that of R2 series astromech droids, with the bulk of his body made up of a ball on which the droid's head rolled. BB-8 was mostly white, with some silver and orange on his body, as well as a black photoreceptor. The droid belonged to Resistance pilot Poe Dameron, whom he accompanied during his flights on his T-70 X-wing starfighter.\n\nA BB-series astromech droid[3] who was built in 29 ABY, BB-8 became the companion of the New Republic Commander and flight leader of Rapier Squadron, Poe Dameron. During one of Rapier Squadron's routine patrols in the Mirrin sector, BB-8 and Poe's squadron responded to a distress message from the freighter Yissira Zyde, which had been boarded and hijacked by the First Order, a remnant of the Old Empire. Rapier Squadron failed to stop the First Order from escaping with the Yissira Zyde and its cargo of high-capacity charging areas. One of the Rapier pilots Muran was killed when the hyperspace wave generated by the Yissira Zyde slammed into his T-85 X-wing.",
         "imageName": "star_wars_bb8",
         "price": 0.40
     },
     {
         "id": 17,
         "name": "Star Wars: Boba Fett",
-        "description": "Star Wars Boba Fett",
+        "description": "Boba Fett, an unaltered clone of the famed Mandalorian bounty hunter Jango Fett, was a human male bounty hunter whose career spanned decades, from the fall of the Galactic Republic to the rise of the Galactic Empire. Fett emulated his father and genetic donor by wearing a customized suit of Mandalorian armor. His personal starship was the Slave I, a Firespray-31-class patrol and attack craft that once belonged to Jango. Trained in combat and martial skills from a young age, Fett was one of the most feared bounty hunters in the galaxy during the reign of Emperor Palpatine. He became a legend over the course of his career, which included contracts for both the Empire and the extensive criminal underworld.\n\nBoba was created on the planet Kamino as a result of an arrangement between the Sith Lord Darth Tyranus and Jango Fett, a Mandalorian foundling who served as the template of the Grand Army of the Republic. Unlike the clone troopers grown from Jango's DNA, Jango regarded Boba as his son. During the last days of the Separatist Crisis, Boba and Jango retreated to Geonosis where the latter was killed in battle by Jedi Master Mace Windu. Orphaned by Jango's death, Boba sought vengeance by attempting to assassinate Windu, although his plan proved unsuccessful. After serving time in prison on Coruscant, Fett took up his late father's profession as a bounty hunter, working alongside other mercenaries such as Bossk, Dengar, and Asajj Ventress.",
         "imageName": "star_wars_boba_fett",
         "price": 0.80
     },
     {
         "id": 18,
         "name": "Star Wars: Obi-Wan Kenobi",
-        "description": "Star Wars Obi-Wan Kenobi",
+        "description": "Obi-Wan Kenobi, also known as Ben Kenobi, was a human male Jedi Master who served on the Jedi High Council during the final years of the Republic Era. As a Jedi General, Kenobi served in the Grand Army of the Republic that fought against the Separatist Droid Army during the Clone Wars. Kenobi, however, was forced into exile as a result of the Great Jedi Purge. As a mentor, Kenobi was responsible for training two members of the Skywalker family, Anakin Skywalker and Luke Skywalker, both of whom served in turn as his Padawan in the ways of the Force.\n\nKenobi was born on the planet Stewjon in 57 BBY. He was Force-sensitive, and therefore inducted into the Jedi Order as a child. Raised in the Jedi Temple on Coruscant, Kenobi was assigned to Jedi Master Qui-Gon Jinn. In 32 BBY, Kenobi attained the rank of Jedi Knight by defeating the Sith Lord Darth Maul during the Invasion of Naboo. He also chose to train Anakin Skywalker—the prophesied Chosen One who was destined to destroy the Sith and restore balance to the Force—having promised Jinn who died in the lightsaber duel against Maul.",
         "imageName": "star_wars_obi_wan_kenobi",
         "price": 1.00
     },
     {
         "id": 19,
         "name": "Star Wars: General Grievous",
-        "description": "Star Wars General Grievous",
+        "description": "Grievous, born as Qymaen jai Sheelal, was a Kaleesh male warlord who served as a commanding officer in the military forces of the Confederacy of Independent Systems during the last years of the Galactic Republic. Although he was known by his rank as a general, Grievous was the Supreme Commander of the Separatist Droid Army that engaged the Grand Army of the Republic throughout the pan-galactic conflict of the Clone Wars. Noted for his ruthlessness and extensive cybernetic enhancements, Grievous inspired fear as he traveled across the galaxy, invading entire worlds and engaging the Jedi Knights of the Republic.\n\nA native of the planet Kalee, Grievous sustained severe injuries that required extensive repair by the time of the Clone Wars. Willingly submitting to a procedure that rendered him more mechanical than organic, he became a living weapon, granting him lightning-quick reflexes and devastating strength. Although he was neither Jedi or Sith, nor even sensitive to the power of the Force, Grievous was a skilled lightsaber duelist, having trained in the art of the lightsaber under the fallen Jedi Master-turned-Sith Lord Count Dooku. Known for his hatred of the Jedi Order, Grievous killed Jedi over the course of the war, and would claim their lightsabers both as trophies and weapons to be used against other opponents, be they Jedi or clone troopers. The cyborg, nicknamed the \"head clanker\" by the Republic clones due to his cybernetics and role as Confederate Supreme Commander, became one of the Republic's priority targets.",
         "imageName": "star_wars_general_grievous",
         "price": 0.70
     },
     {
         "id": 20,
         "name": "Star Wars: Rey",
-        "description": "Star Wars Rey",
+        "description": "Rey Skywalker, once known only as Rey, was a human female Jedi Master who fought on the side of the Resistance in the war against the First Order. A former scavenger from the planet Jakku, her life was changed by the tumultuous events of the last days of the New Republic Era. Her decision to help the droid BB-8 would set Rey on a course to discovering the Force that awakened within her, leading her to seek out Jedi Master Luke Skywalker for training. Yet despite her commitment to the Jedi Order and the light side of the Force, Rey felt the pull to the dark side due to her anger and the adversarial relationship she had with Ben Solo, a fallen Jedi whom she knew as the dark warrior Kylo Ren. The unique Force-bond between them was a result of their nature as a dyad in the Force.\n\nRey was born in 15 ABY during the rise of the New Republic. Her father was a bioengineered Strand-Cast cloned from the genetic template of Darth Sidious, the Sith Lord who ruled the Galactic Empire as Emperor Palpatine. The clone and Rey's mother chose to live as simple junk traders in order to hide their daughter, who inherited Sidious' connection to the Force, from his followers. After the deaths of her parents, Rey was forced to survive on her own in the Jakku desert, and became a skilled mechanic, pilot and combatant in the process. Her isolated life was disrupted shortly before war broke out across the galaxy in 34 ABY. Determined to help the Resistance, Rey gained several new allies including Finn, a renegade stormtrooper, as well as the veterans Han Solo and Chewbacca. In the course of their journey, she discovered her latent Force powers and sought guidance under Skywalker, who taught her the art of the Force despite his decision to end the Jedi legacy. After Skywalker sacrificed himself to save the Resistance, Rey assumed his mantle as the last Jedi and became the apprentice of General Leia Organa.",
         "imageName": "star_wars_rey",
         "price": 0.90
     },
     {
         "id": 21,
         "name": "Borderlands Pre-Sequal: Athena",
-        "description": "Borderlands Pre-Sequal Athena",
+        "description": "Athena is an NPC in The Secret Armory of General Knoxx, and is the \"Gladiator\" class playable character in Borderlands: The Pre-Sequel. She used to be a Lance Assassin, even claiming to be the \"top operative\" of the Crimson Lance and a leader of an Omega Squad, but has since defected.\n\nAfter helping the Vault Hunters take down Atlas, she traveled Pandora as a hired gun. Desperate for money, she took a job as a Vault Hunter for a low-level Hyperion programmer by the name of Jack.\n\nNot much is known about Athena's past, other than that she was trained to be an assassin since childhood, along with many other girls her age, by the Atlas Corporation. She and all the assassins trainee are later recruited into the Crimson Lance.",
         "imageName": "borderlands_presequal_athena",
         "price": 3.20
     },
     {
         "id": 22,
         "name": "Borderlands Pre-Sequal: Claptrap",
-        "description": "Borderlands Pre-Sequal Claptrap",
+        "description": "Claptrap is a CL4P-TP general purpose robot manufactured by Hyperion. It has been programmed with an overenthusiastic personality, and brags frequently, yet also expresses severe loneliness and cowardice.\n\nWhen the Vault Hunters leave the bus at the very beginning of Borderlands they are met by Claptrap, who introduces them to Dr. Zed. It later takes them to the Fyrestone gate in the mission Claptrap Rescue, where it is damaged by bandits. The Guardian Angel then says to get a repair kit and perform the first Claptrap rescue. Claptrap later hangs around as an alert system to offer notifications of available missions, both in Fyrestone and later at T-Bone Junction.",
         "imageName": "borderlands_presequal_claptrap",
         "price": 2.10
     },
     {
         "id": 23,
         "name": "Borderlands Pre-Sequal: Jack",
-        "description": "Borderlands Pre-Sequal Jack",
+        "description": "Timothy Lawrence, formerly known as \"Jack\", is a look-alike body double of Handsome Jack. Representing the Doppelganger class, \"Jack\" is the fifth playable character in Borderlands: The Pre-Sequel, first revealed at PAX Prime 2014. Jack was added as post-release downloadable content released on November 11, 2014. His skill summons two Digi-Jacks to fight for him.\n\nHe reappears in the Borderlands 3 DLC Moxxi's Heist of the Handsome Jackpot, where it is revealed that he has been imprisoned on The Handsome Jackpot for seven years following Handsome Jack's death. He retains his appearance, though he has a crack on the left side of his mask, and he uses his actual name, not his alias.",
         "imageName": "borderlands_presequal_jack",
         "price": 1.00
     },
     {
         "id": 24,
         "name": "Borderlands Pre-Sequal: Moxxi",
-        "description": "Borderlands Pre-Sequal Moxxi",
+        "description": "Moxxi could be summed up with the words sadistic, lustful, alluring, and dangerous. She enjoys violence and combat, having been a skilled fighter in her earlier years. Modesty has little to do with Moxxi, especially when it comes to sex. Her affairs are innumerable and she has had several husbands, and her lovers have been both male and female. She is also surprisingly refined in her tastes and mannerisms, always speaking with a seductive tone and an innuendo soon following.\n\nMoxxi, despite her violent tastes, is also friendly and rather compassionate when fighting is not involved. She is a caring mother, in her own Pandoran way, and can be protective of her children and others close.\n\nMoxxi was originally a member of the Hodunk clan. She grabbed her children and split from the Hodunks to prevent her daughter Ellie becoming the clan wife. Moxxi has been married at least three times to different husbands. She mothered a son, Scooter, with Jimbo Hodunk presumably back when she was part of the Hodunk clan.\n\nMr. Shank from The Secret Armory of General Knoxx is officially her second as she \"mourns\" the death of her \"second husband\" after Mr. Shank's death. Her third husband was Marcus Kincaid, as revealed in the mission Safe and Sound. She was also involved, at least sexually, with Lucky Zaford according to her son Scooter, but there is no indication as to whether or not he was one of her husbands. She created The Underdome to keep herself occupied while she searched for a new husband. She has also been involved in a relationship with Handsome Jack, as made evident in the Borderlands 2 side mission \"Hell Hath No Fury\". However, there is no evidence that they were ever married.",
         "imageName": "borderlands_presequal_moxxi",
         "price": 1.60
     },
     {
         "id": 25,
         "name": "Borderlands Pre-Sequal: Nisha",
-        "description": "Borderlands Pre-Sequal Nisha",
+        "description": "Nisha Kadam, also known as The Sheriff of Lynchwood, is an optional boss in Borderlands 2, encountered during the mission Showdown. She is also featured as a playable Lawbringer class character in Borderlands: The Pre-Sequel.\n\nNisha had a rough childhood, having to deal with an abusive mother who often yelled and tossed all sorts of things at her. She used this as a way to train her reflexes, eventually being able to catch everything her mother could throw at her. One day, Nisha's father got her a puppy, which she started to care for. The two of them were inseparable, until the dog was bitten by a frenzycrutch. At first, the dog showed no strange signs, but during one night, while Nisha was catching more of her mother's projectiles, one of them slipped off her hand and hit the dog. Its eyes went red, lips went blue, and it jumped on Nisha and bit her in the neck, while her mother laughed. After getting patched up by her father, Nisha used a shovel to bash the dog's brains out.",
         "imageName": "borderlands_presequal_nisha",
         "price": 1.10
     },
