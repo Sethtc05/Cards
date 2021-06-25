@@ -1,0 +1,184 @@
+[
+    {
+        "id": 1,
+        "name": "Borderlands 2: Zer0",
+        "description": "Zer0 is the playable Assassin class character in Borderlands 2. Zer0 is an assassin for hire. According to his wanted poster and his personal ECHO recordings, he performs both political assassinations and common hits.\n\nFollowing a particularly unsatisfying assassination where the target fails to fight back, despite being encouraged by Zer0 to do so, the assassin starts to look for a more challenging environment. He travels to Pandora after hearing of the Vault from a bartender, deeming the hunt as worthy of his skills.",
+        "imageName": "borderlands_2_zero",
+        "price": 1.20
+    },
+    {
+        "id": 2,
+        "name": "Borderlands 2: Axton",
+        "description": "Axton is the playable Commando class character in Borderlands 2. Axton became aware of the Vault thanks to a radio advertisement orchestrated by Handsome Jack, who had been monitoring the Commando's most recent bounty hunt.\n\nAlthough Axton was turning in more bounties and making far more money than anyone else in Sheriff Youngblood's jurisdiction, he found that it was too easy, and the lure of fame, fortune, and challenging combat drew him to Pandora.",
+        "imageName": "borderlands_2_axton",
+        "price": 0.70
+    },
+    {
+        "id": 3,
+        "name": "Borderlands 2: Maya",
+        "description": "Maya is a playable \"Siren\" class character in Borderlands 2 and NPC in Borderlands 3.\n\nAs an infant, Maya was identified as a Siren and given to the Order of the Impending Storm, the ruling order of monks on her homeworld of Athenas. She trained her Siren powers in secret until she reached adulthood, when the monks revealed her to the public as their goddess and savior.\n\nIrritated by the Order's short leash, she longed for adventure and expressed interest in traveling to Pandora to learn more about her Siren lineage. She eventually realized that the Order was using her as a threat to extort money and obedience from the people of Athenas. After Phaselocking and executing her handler Brother Sophis, she headed to Pandora to finally satisfy her curiosity about Sirens.",
+        "imageName": "borderlands_2_maya",
+        "price": 1.20
+    },
+    {
+        "id": 4,
+        "name": "Borderlands 2: Salvador",
+        "description": "Salvador is the Gunzerker-class character in Borderlands 2. His main skill, Gunzerking, allows him to dual wield any two weapons in the game for a limited time.\n\nDespite his love for excessive violence being aimed towards bandits and criminals, Salvador was nonetheless about to be executed by the people of his own hometown of Ovejas for his actions when a Hyperion strike team arrived to seize the town.\n\nAfter destroying the invading forces, Salvador becomes interested in the new Vault upon hearing of its dangers while \"interrogating\" the last survivor of the strike team and leaving him to crawl back to Hyperion on a single arm (as Salvador had ripped off his other arm and broken both his legs).",
+        "imageName": "borderlands_2_salvador",
+        "price": 0.70
+    },
+    {
+        "id": 5,
+        "name": "Borderlands 2: Handsome Jack",
+        "description": "Handsome Jack is the main antagonist of Borderlands 2, and the deuteragonist of Borderlands: The Pre-Sequel.\n\nHe has taken over the Hyperion corporation, declared himself dictator of Pandora, and stolen all of the credit for finding The Vault, going so far as to claim responsibility for killing The Destroyer. A new team of Vault Hunters is tasked with killing Jack and restoring (relative) peace to Pandora.\n\nJack placed Helios, an enormous geostationary space station, in the Lagrange point between Pandora and its moon, Elpis. It acts as an homage to his ego as well as a supply base from which he can send supplies and troops down to Pandora. The satellite also has a lens that allows Jack to keep an eye on the Vault Hunters at all times.",
+        "imageName": "borderlands_2_handsome_jack",
+        "price": 0.70
+    },
+    {
+        "id": 6,
+        "name": "Borderlands 2: Gaige",
+        "description": "Gaige is the playable Mechromancer class character, and the fifth playable class overall in Borderlands 2.\n\nGaige was a high school student from the planet Eden-5, and lovingly supported in her endeavors by her parents, particularly her father. She would often ECHOcast live about what was going on in her life and had a dozen subscribers to her channel, although this dropped over time to two.\n\nGaige found the history behind the Vaults, Eridium, and Pandora to be particularly fascinating, and considered her era to be \"the most awesomely awesome time period in history\" to be living in.",
+        "imageName": "borderlands_2_gaige",
+        "price": 2.00
+    },
+    {
+        "id": 7,
+        "name": "Halo: Combat Evolved",
+        "description": "Halo: Combat Evolved, also known as Halo: CE, is a first-person shooter game developed by Bungie and published by Microsoft Game Studios.\n\nIt was released as a launch game for Microsoft's Xbox video game console on November 15, 2001. Microsoft released versions of the game for Windows and Mac OS X in 2003. The game was later released as a downloadable Xbox Original for the Xbox 360.\n\nHalo is set in the twenty-sixth century, with the player assuming the role of the Master Chief, a cybernetically enhanced supersoldier. The Chief is accompanied by Cortana, an artificial intelligence. Players battle aliens as they attempt to uncover the secrets of the eponymous Halo, a ring-shaped artificial world.",
+        "imageName": "halo_combat_evolved",
+        "price": 1.50
+    },
+    {
+        "id": 8,
+        "name": "Halo 2: Master Chief",
+        "description": "Saber Interactive, which co-developed Combat Evolved Anniversary, assisted in the remake of Halo 2's campaign. It received a complete visual overhaul. The game's soundtrack and sound effects, such as weapon audio, were updated as well. The refined Halo 2 cutscenes, as well as two new cutscenes created to complement the Halo 5: Guardians storyline, were produced by Blur Studio.\n\nThey feature the same structure and timing of the originals, and motion capture was utilized for the animation.\n\n\"Terminals\", a feature first introduced in Halo 3, were added to the Halo 2: Anniversary campaign. Their purpose was to create a \"connective tissue\" for stories within the Halo universe that explores the relationship between the different races within the Covenant and extensively covers the events portrayed in Halo 2. Terminals also gave 343 Industries the opportunity to introduce Spartan Locke, a main character in Halo 5: Guardians.\n\nVisual effect studio The Sequence Group collaborated with 343 Industries to provide the animation; the group had previously performed similar work in Combat Evolved Anniversary and Halo 4. Several voice actors reprised their roles including Keith David as the Arbiter, John DiMaggio as the Heretic Leader, and Tim Dadabo as 343 Guilty Spark. Mike Colter provided the voice-over for Spartan Locke.",
+        "imageName": "halo_2_master_chief",
+        "price": 2.60
+    },
+    {
+        "id": 9,
+        "name": "Halo: Reach",
+        "description": "Halo Reach",
+        "imageName": "halo_reach",
+        "price": 1.10
+    },
+    {
+        "id": 10,
+        "name": "Halo 3: ODST",
+        "description": "Halo 3 ODST",
+        "imageName": "halo_3_odst",
+        "price": 0.80
+    },
+    {
+        "id": 11,
+        "name": "Halo 4: Master Chief",
+        "description": "Halo 4 Master Chief",
+        "imageName": "halo_4_master_chief",
+        "price": 2.10
+    },
+    {
+        "id": 12,
+        "name": "Rocket League: Kick Off",
+        "description": "Rocket League Kick Off",
+        "imageName": "rocket_league_kick_off",
+        "price": 0.90
+    },
+    {
+        "id": 13,
+        "name": "Rocket League: Goal",
+        "description": "Rocket League Goal",
+        "imageName": "rocket_league_goal",
+        "price": 0.70
+    },
+    {
+        "id": 14,
+        "name": "Rocket League: Epic Save",
+        "description": "Rocket League Epic Save",
+        "imageName": "rocket_league_epic_save",
+        "price": 0.60
+    },
+    {
+        "id": 15,
+        "name": "Rocket League: Rocket Boost",
+        "description": "Rocket League Rocket Boost",
+        "imageName": "rocket_league_rocket_boost",
+        "price": 1.00
+    },
+    {
+        "id": 16,
+        "name": "Star Wars: BB8",
+        "description": "Star Wars BB8",
+        "imageName": "star_wars_bb8",
+        "price": 0.40
+    },
+    {
+        "id": 17,
+        "name": "Star Wars: Boba Fett",
+        "description": "Star Wars Boba Fett",
+        "imageName": "star_wars_boba_fett",
+        "price": 0.80
+    },
+    {
+        "id": 18,
+        "name": "Star Wars: Obi-Wan Kenobi",
+        "description": "Star Wars Obi-Wan Kenobi",
+        "imageName": "star_wars_obi_wan_kenobi",
+        "price": 1.00
+    },
+    {
+        "id": 19,
+        "name": "Star Wars: General Grievous",
+        "description": "Star Wars General Grievous",
+        "imageName": "star_wars_general_grievous",
+        "price": 0.70
+    },
+    {
+        "id": 20,
+        "name": "Star Wars: Rey",
+        "description": "Star Wars Rey",
+        "imageName": "star_wars_rey",
+        "price": 0.90
+    },
+    {
+        "id": 21,
+        "name": "Borderlands Pre-Sequal: Athena",
+        "description": "Borderlands Pre-Sequal Athena",
+        "imageName": "borderlands_presequal_athena",
+        "price": 3.20
+    },
+    {
+        "id": 22,
+        "name": "Borderlands Pre-Sequal: Claptrap",
+        "description": "Borderlands Pre-Sequal Claptrap",
+        "imageName": "borderlands_presequal_claptrap",
+        "price": 2.10
+    },
+    {
+        "id": 23,
+        "name": "Borderlands Pre-Sequal: Jack",
+        "description": "Borderlands Pre-Sequal Jack",
+        "imageName": "borderlands_presequal_jack",
+        "price": 1.00
+    },
+    {
+        "id": 24,
+        "name": "Borderlands Pre-Sequal: Moxxi",
+        "description": "Borderlands Pre-Sequal Moxxi",
+        "imageName": "borderlands_presequal_moxxi",
+        "price": 1.60
+    },
+    {
+        "id": 25,
+        "name": "Borderlands Pre-Sequal: Nisha",
+        "description": "Borderlands Pre-Sequal Nisha",
+        "imageName": "borderlands_presequal_nisha",
+        "price": 1.10
+    },
+    {
+        "id": 26,
+        "name": "Borderlands Pre-Sequal: Wilhelm",
+        "description": "Wilhelm is a cyborg who serves Handsome Jack, and who nearly killed the original Vault Hunters after the events of Borderlands. He is one of the bosses in Borderlands 2, and is the \"Enforcer\" class playable character in Borderlands: The Pre-Sequel.\n\nAs a child, Wilhelm had a mild case of Bone Waste that required him to get cybernetic implants at an early age, which would develop into a full-out addiction to cybernetics and a desire to become a full-on robot later in his life.\n\nHe became a mercenary due to the fact that, in his own words: \"As a kid/teenager, I was good at fights\". He would go on to become the galaxy's most famous mercenary, having fought for every corporation and gaining a kill count equivalent to the population of a small country though his failure to protect either a president or an orphanage made it harder to get jobs in the inner world.\n\nAt some point, he was hired by Jack as a Vault Hunter on Elpis for a few million dollars, helping him in his rise to power and eventually becoming his chief minion.",
+        "imageName": "borderlands_presequal_wilhelm",
+        "price": 1.80
+    }
+]
