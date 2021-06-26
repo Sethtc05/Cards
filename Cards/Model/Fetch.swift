@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 class Fetch: ObservableObject {
     
@@ -6,14 +7,17 @@ class Fetch: ObservableObject {
     @Published var collectionCards: [Card]
     @Published var balanceAmount: Double
     
+    var startingBalance = 0.00;
     var cardsListFilename = "cards.json";
     var storeListFilename = "store.json";
     var collectionListFilename = "collection.json";
      
     init() {
+        print("Initialising Fetch")
+        
         storeCards = []
         collectionCards = []
-        balanceAmount = 0.0
+        balanceAmount = startingBalance
         
         storeCards = loadStoreData(cardsListFilename, storeListFilename)
         collectionCards = loadCollectionData(collectionListFilename)
@@ -29,11 +33,13 @@ class Fetch: ObservableObject {
     }
     
     func buy(_ card: Card) {
+        balanceAmount -= card.price;
         storeCards = removeData(card, storeCards, storeListFilename)
         collectionCards = addData(card, collectionCards, collectionListFilename)
     }
     
     func sell(_ card: Card) {
+        balanceAmount += card.price;
         collectionCards = removeData(card, collectionCards, collectionListFilename)
         storeCards = addData(card, storeCards, storeListFilename)
     }

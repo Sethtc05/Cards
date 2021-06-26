@@ -5,9 +5,13 @@ struct CardsApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate    
     @Environment(\.scenePhase) var scenePhase
+    
+    static var fetch = Fetch()
+    static var play = Play()
 
     init() {
         // Application Load
+        print("Application load...")
     }
     
     var body: some Scene {

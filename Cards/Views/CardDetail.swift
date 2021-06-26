@@ -4,19 +4,18 @@ struct CardDetail: View {
     
     var card: Card
     var listType: ListType
-    var fetch: Fetch
     
+    @ObservedObject var fetch = CardsApp.fetch
     @Environment(\.presentationMode) var presentationMode
+    
     @State private var offset: CGFloat = -500.0
+    @State private var showingPaymentAlert = false
     
     var body: some View {
         
         ZStack(alignment: .bottom) {
-            
             VStack (spacing: 0) {
- 
                 ScrollView {
-                    
                      VStack (spacing: 0) {
                         
                             Image(card.imageName)
@@ -43,15 +42,29 @@ struct CardDetail: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
                 GeometryReader { geometry in
+                    
                     Button(action: {
+                        
                         if self.listType == ListType.collection {
+                            
+                            showingPaymentAlert = false
                             fetch.sell(card)
+                            
                         } else {
+                            
+                            if ((fetch.balanceAmount - card.price) < 0.00) {
+                                showingPaymentAlert = true
+                                return;
+                            }
+                            
                             fetch.buy(card)
                         }
+                        
                         self.presentationMode.wrappedValue.dismiss()
+                        
                     }) {
-                        Text("\(getButtonText()) for \(card.price, specifier: "$%.2f")")
+                        
+                        Text("\(self.listType == ListType.collection ? "Sell" : "Buy") for \(card.price, specifier: "$%.2f")")
                             .frame(
                                 minWidth: (geometry.size.width / 2) - 25,
                                 maxWidth: .infinity,
@@ -61,6 +74,16 @@ struct CardDetail: View {
                             .background(self.listType == ListType.collection ? Color.red : Color.green)
                             .foregroundColor(Color.white)
                             .cornerRadius(4)
+                        
+                    }
+                    .alert(isPresented: $showingPaymentAlert) {
+                        
+                        Alert(
+                            title: Text("Insufficient Funds"),
+                            message: Text("You do not have enough money to buy this card."),
+                            dismissButton: .default(Text("OK"))
+                        )
+                        
                     }
                 }
                 .frame(maxHeight: 44)
@@ -69,15 +92,5 @@ struct CardDetail: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.gray.opacity(0.2))
-    }
-    
-    func getButtonText() -> String {
-        var buttonText = ""
-        if self.listType == ListType.collection {
-            buttonText = "Sell"
-        } else {
-            buttonText = "Buy"
-        }
-        return buttonText;
     }
 }

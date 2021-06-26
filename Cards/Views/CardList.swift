@@ -2,9 +2,10 @@ import SwiftUI
 
 struct CardList: View {
     
+    @ObservedObject var fetch: Fetch
+    
     var cards: [Card]
     var listType: ListType
-    var fetch: Fetch
     
     var body: some View {
 
@@ -42,8 +43,8 @@ struct CardList: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Text(self.listType == ListType.collection
-                                ? "Total: \(getTotal(), specifier: "$%.2f")"
-                                : "Balance: \(getTotal(), specifier: "$%.2f")")
+                                ? "Worth: \(getTotal(), specifier: "$%.2f")"
+                                : "Balance: \(getBalance(), specifier: "$%.2f")")
                             .foregroundColor(Color.blue)
                             .font(.system(size: 14))
                     }
@@ -90,5 +91,9 @@ struct CardList: View {
         }
         
         return total
+    }
+    
+    func getBalance() -> Double {
+        return fetch.balanceAmount;
     }
 }
