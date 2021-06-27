@@ -52,7 +52,7 @@ struct CardDetail: View {
                             
                         } else {
                             
-                            if ((fetch.balanceAmount - card.price) < 0.00) {
+                            if ((fetch.userData.balance - card.price) < 0.00) {
                                 showingPaymentAlert = true
                                 return;
                             }

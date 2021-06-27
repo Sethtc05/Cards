@@ -46,7 +46,7 @@ class Play: ObservableObject  {
             rows: rowCount,
             columns: columnCount,
             defaultValue: PlayOption(
-                value: 0,
+                value: 0.00,
                 backgroundColor: inactiveBackgroundColor,
                 foregroundColor: inactiveForegroundColor))
 
@@ -109,13 +109,13 @@ class Play: ObservableObject  {
         resetOptions()
         selectRandomOption()
         
-        if runCount == 12 {
+        if runCount == 50 {
             playTimer?.invalidate()
             runCount = 0
             waitSeconds = 60
             self.isRunning = false
             self.isEnabled = false
-            winFunc(self.board[self.landedRowIndex, self.landedColIndex].value);
+            winFunc(self.board[self.landedRowIndex, self.landedColIndex].value)
             print("Stop...")
             waitTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(waitTimerFunc), userInfo: nil, repeats: true)
         }
@@ -126,20 +126,20 @@ class Play: ObservableObject  {
         waitSeconds -= 1
         if (waitSeconds == 0) {
             waitTimer?.invalidate()
-            isEnabled = true;
+            isEnabled = true
         }
     }
 }
 
 class PlayOption: ObservableObject {
     
-    @Published var value: Double;
-    @Published var backgroundColor: Color;
-    @Published var foregroundColor: Color;
+    @Published var value: Double
+    @Published var backgroundColor: Color
+    @Published var foregroundColor: Color
     
     init(value: Double, backgroundColor: Color, foregroundColor: Color) {
-        self.value = value;
-        self.backgroundColor = backgroundColor;
-        self.foregroundColor = foregroundColor;
+        self.value = value
+        self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
     }
 }

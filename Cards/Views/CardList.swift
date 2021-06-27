@@ -44,7 +44,7 @@ struct CardList: View {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Text(self.listType == ListType.collection
                                 ? "Worth: \(getTotal(), specifier: "$%.2f")"
-                                : "Balance: \(getBalance(), specifier: "$%.2f")")
+                                : "Balance: \(fetch.userData.balance, specifier: "$%.2f")")
                             .foregroundColor(Color.blue)
                             .font(.system(size: 14))
                     }
@@ -91,9 +91,5 @@ struct CardList: View {
         }
         
         return total
-    }
-    
-    func getBalance() -> Double {
-        return fetch.balanceAmount;
     }
 }

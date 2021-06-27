@@ -3,7 +3,6 @@ import SwiftUI
 struct PlayView: View {
     
     @ObservedObject var play: Play
-    
     @State private var showingWinAlert = false
     @State private var winAmount = 0.00
     
@@ -42,7 +41,7 @@ struct PlayView: View {
                         
                         play.start(winFunc: { balance in
                             winAmount = balance
-                            CardsApp.fetch.balanceAmount += balance
+                            CardsApp.fetch.adjustBalance(balance)
                             showingWinAlert = true
                           })
                         
@@ -66,7 +65,7 @@ struct PlayView: View {
                     
                     Alert(
                         title: Text("Earnings"),
-                        message: Text("You won \(winAmount)!"),
+                        message: Text("You won \(winAmount, specifier: "$%.2f")!"),
                         dismissButton: .default(Text("OK"))
                     )
                     

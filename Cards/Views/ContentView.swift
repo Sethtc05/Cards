@@ -12,19 +12,19 @@ struct ContentView: View {
          TabView(selection: $selection) {
             
             // Collection tab
-            CardList(fetch: fetch, cards: fetch.collectionCards, listType: ListType.collection)
+            CardList(fetch: fetch, cards: fetch.userData.collection, listType: ListType.collection)
                 .tabItem {
                     VStack {
-                        selection == 1 ? Image("collection_tab") : Image("collection_tab_selected")
+                        selection == 0 ? Image("collection_tab_selected") : Image("collection_tab")
                         Text("Collection")
                     }
                 }.tag(0)
             
             // Store tab
-            CardList(fetch: fetch, cards: fetch.storeCards, listType: ListType.store)
+            CardList(fetch: fetch, cards: fetch.userData.store, listType: ListType.store)
                 .tabItem {
                     VStack {
-                        selection == 0 ? Image("store_tab") : Image("store_tab_selected")
+                        selection == 1 ? Image("store_tab_selected") : Image("store_tab")
                         Text("Store")
                     }
                 }.tag(1)
@@ -33,7 +33,7 @@ struct ContentView: View {
             PlayView(play: play)
                 .tabItem {
                     VStack {
-                        selection == 2 ? Image("store_tab") : Image("store_tab_selected")
+                        selection == 2 ? Image("play_tab_selected") : Image("play_tab")
                         Text("Play")
                     }
                 }.tag(2)
