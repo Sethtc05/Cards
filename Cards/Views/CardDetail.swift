@@ -13,9 +13,16 @@ struct CardDetail: View {
     
     var body: some View {
         
+        // Z-axis stack (one on top of the other on a z-axis)
         ZStack(alignment: .bottom) {
+            
+            // Vertical stack (one on top of the other vertically)
             VStack (spacing: 0) {
+                
+                // Lets scroll down to see more
                 ScrollView {
+                    
+                    // Shows the card image and some information about the selected card.
                      VStack (spacing: 0) {
                         
                             Image(card.imageName)
@@ -41,29 +48,38 @@ struct CardDetail: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
+                // A buy or sell button strectched out to fill the screen horizontally.
                 GeometryReader { geometry in
                     
                     Button(action: {
+                        // The button has been pressed.
                         
+                        // Are we in my collection?
                         if self.listType == ListType.collection {
                             
+                            // We must be selling the card to the store for money.
                             showingPaymentAlert = false
                             fetch.sell(card)
                             
-                        } else {
+                        } else { // We must be in the store.
                             
+                            // Do I have enough money to buy this card?
+                            // If not, let the user know and prevent the purchase.
                             if ((fetch.userData.balance - card.price) < 0.00) {
                                 showingPaymentAlert = true
                                 return;
                             }
                             
+                            // Buy the card.
                             fetch.buy(card)
                         }
                         
+                        // Leave the card detail page and go back to the list we came from.
                         self.presentationMode.wrappedValue.dismiss()
                         
                     }) {
                         
+                        // Set the text of the button based on whether we are in my collection or the store list (Buy or Sell).
                         Text("\(self.listType == ListType.collection ? "Sell" : "Buy") for \(card.price, specifier: "$%.2f")")
                             .frame(
                                 minWidth: (geometry.size.width / 2) - 25,
@@ -78,6 +94,7 @@ struct CardDetail: View {
                     }
                     .alert(isPresented: $showingPaymentAlert) {
                         
+                        // Sorry you don't have enough to buy this card. Play to win some more money!
                         Alert(
                             title: Text("Insufficient Funds"),
                             message: Text("You do not have enough money to buy this card."),

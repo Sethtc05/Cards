@@ -1,37 +1,17 @@
 import SwiftUI
 
+// The big main application class - This is where we start the journey off.
+
 @main
 struct CardsApp: App {
-    
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate    
-    @Environment(\.scenePhase) var scenePhase
-    
+      
     static var fetch = Fetch()
     static var play = Play()
-
-    init() {
-        // Application Load
-        print("Application load...")
-    }
     
     var body: some Scene {
+        
         WindowGroup {
             ContentView()
-                .onOpenURL(perform: { url in
-                    print("Incoming URL: \(url)")
-                })
-        }
-        .onChange(of: scenePhase) { (newScreenPhase) in
-            switch (newScreenPhase) {
-                case .background:
-                    print("App State:  Background")
-                case .inactive:
-                    print("App State: Inactive")
-                case .active:
-                    print("App State: Active")
-                @unknown default:
-                    print("App State: Unknown")
-            }
         }
     }
 }

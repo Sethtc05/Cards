@@ -7,6 +7,9 @@ struct ContentView: View {
     @ObservedObject var fetch = CardsApp.fetch
     @ObservedObject var play = CardsApp.play
 
+    // The main outer view of the application.
+    // Three tabs: My Collection, Store and Play.
+    // Two lists of cards and a spinning wheel game to earn more money.
     var body: some View {
         
          TabView(selection: $selection) {

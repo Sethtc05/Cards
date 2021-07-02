@@ -1,5 +1,6 @@
 import SwiftUI
 
+// Displays a card when represented in a list.
 struct CardRow: View {
     
     var card: Card

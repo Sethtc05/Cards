@@ -18,7 +18,6 @@
 		E73D1FF6266772040018BB2F /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D1FF5266772040018BB2F /* CardList.swift */; };
 		E748FE042687326D00A9597E /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E748FE032687326D00A9597E /* PlayView.swift */; };
 		E7765FD5266C5DC70033961F /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7765FD4266C5DC70033961F /* ListType.swift */; };
-		E7822293266B5A0B005525A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7822292266B5A0B005525A6 /* AppDelegate.swift */; };
 		E782229E266B6497005525A6 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782229D266B6497005525A6 /* Fetch.swift */; };
 		E7982C742685C28400CC0EDF /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7982C732685C28400CC0EDF /* Play.swift */; };
 		E7982C762685C37D00CC0EDF /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7982C752685C37D00CC0EDF /* Matrix.swift */; };
@@ -39,7 +38,6 @@
 		E73D1FF5266772040018BB2F /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		E748FE032687326D00A9597E /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		E7765FD4266C5DC70033961F /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
-		E7822292266B5A0B005525A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E782229D266B6497005525A6 /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
 		E7982C732685C28400CC0EDF /* Play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
 		E7982C752685C37D00CC0EDF /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				E73D1FE0266766E60018BB2F /* Model */,
 				E70224FD266762E70064B055 /* Assets.xcassets */,
 				E70224F9266762E60064B055 /* CardsApp.swift */,
-				E7822292266B5A0B005525A6 /* AppDelegate.swift */,
 				E73D1FE42667675F0018BB2F /* cards.json */,
 				E7022502266762E70064B055 /* Info.plist */,
 				E70224FF266762E70064B055 /* Preview Content */,
@@ -201,7 +198,6 @@
 			files = (
 				E7987E9B268819A500B33467 /* UserData.swift in Sources */,
 				E782229E266B6497005525A6 /* Fetch.swift in Sources */,
-				E7822293266B5A0B005525A6 /* AppDelegate.swift in Sources */,
 				E73D1FD9266765EA0018BB2F /* Card.swift in Sources */,
 				E70224FC266762E60064B055 /* ContentView.swift in Sources */,
 				E73D1FF026676AC60018BB2F /* CardDetail.swift in Sources */,
