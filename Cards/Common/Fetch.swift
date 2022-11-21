@@ -11,7 +11,7 @@ class Fetch: ObservableObject {
     private var userDataFileName = "userData.json"
 
     // All card lists and balance amount is saved as one overall 'UserData' object.
-    @Published var userData: UserData
+    @Published private var userData: UserData
     
     // Initialise (aka Create)
     init() {
@@ -172,5 +172,32 @@ class Fetch: ObservableObject {
             // Ah... well i'm be darned. What happened?
             fatalError("Could not save user data file: \(destinationFilename)\n \(error)")
         }
+    }
+    
+    func getCollection() -> [Card] {
+        return userData.collection.sort()
+    }
+    
+    func getStore() -> [Card] {
+        
+        var storeCards: [Card] = [];
+        
+        for i in userData.store.indices {
+            
+            if (userData.store[i].name == "Mystrey Box") {
+                var mystreyBox = userData.store[i];
+                mystreyBox.price = Double(userData.store.getTotal()) / Double(userData.store.count)
+                storeCards.append(mystreyBox);
+            }
+            else {
+                storeCards.append(userData.store[i])
+            }
+        }
+        
+        return storeCards.sort()
+    }
+    
+    func getBalance() -> Double {
+        return userData.balance
     }
 }

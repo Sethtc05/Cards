@@ -7,7 +7,7 @@ struct CardsApp: App {
       
     static var fetch = Fetch()
     static var play = Play()
-    
+        
     var body: some Scene {
         
         WindowGroup {

@@ -38,7 +38,6 @@ struct PlayView: View {
                         
                     }
                     .padding(5)
-                    
                 }
                 
                 Button {
@@ -52,7 +51,7 @@ struct PlayView: View {
                             winAmount = balance
                             CardsApp.fetch.adjustBalance(balance)
                             showingWinAlert = true
-                          })
+                        })
                         
                     }
                     

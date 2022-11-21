@@ -8,6 +8,7 @@ struct CardList: View {
     
     var cards: [Card]
     var listType: ListType
+    var title: String;
     
     var body: some View {
 
@@ -43,7 +44,7 @@ struct CardList: View {
                         CardRow(card: card)
                     }
                 }
-                .navigationTitle(self.getNavigationTitle())
+                .navigationTitle(title)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -51,25 +52,14 @@ struct CardList: View {
                         // If we are in my collection card list lets show in the page header what the total value of all my cards are.
                         // If we are in the store list lets show how much money we have available to buy more cards.
                         Text(self.listType == ListType.collection
-                                ? "Worth: \(getTotal(), specifier: "$%.2f")"
-                                : "Balance: \(fetch.userData.balance, specifier: "$%.2f")")
+                                ? "Worth: \(cards.getTotal(), specifier: "$%.2f")"
+                                : "Balance: \(fetch.getBalance(), specifier: "$%.2f")")
                             .foregroundColor(Color.blue)
                             .font(.system(size: 14))
                     }
                 }
             }
         }
-    }
-    
-    // Let the user know which list they are currently in by displaying the name in the page navigation bar.
-    func getNavigationTitle() -> String {
-        var navigationTitle = "Store"
-        
-        if (listType == ListType.collection) {
-            navigationTitle = "Collection"
-        }
-        
-        return navigationTitle
     }
     
     // If the list is empty we display an image instead of an empty screen.
@@ -93,16 +83,5 @@ struct CardList: View {
         }
         
         return emptyText
-    }
-    
-    // Add up the value of our collection of cards so we can see what they are all worth.
-    func getTotal() -> Double {
-        var total = 0.0
-        
-        for card in cards {
-            total += card.price
-        }
-        
-        return total
     }
 }

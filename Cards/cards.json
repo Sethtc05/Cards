@@ -180,5 +180,12 @@
         "description": "Wilhelm is a cyborg who serves Handsome Jack, and who nearly killed the original Vault Hunters after the events of Borderlands. He is one of the bosses in Borderlands 2, and is the \"Enforcer\" class playable character in Borderlands: The Pre-Sequel.\n\nAs a child, Wilhelm had a mild case of Bone Waste that required him to get cybernetic implants at an early age, which would develop into a full-out addiction to cybernetics and a desire to become a full-on robot later in his life.\n\nHe became a mercenary due to the fact that, in his own words: \"As a kid/teenager, I was good at fights\". He would go on to become the galaxy's most famous mercenary, having fought for every corporation and gaining a kill count equivalent to the population of a small country though his failure to protect either a president or an orphanage made it harder to get jobs in the inner world.\n\nAt some point, he was hired by Jack as a Vault Hunter on Elpis for a few million dollars, helping him in his rise to power and eventually becoming his chief minion.",
         "imageName": "borderlands_presequal_wilhelm",
         "price": 1.80
+    },
+    {
+        "id": 27,
+        "name": "Mystrey Box",
+        "description": "Mystrey Box",
+        "imageName": "mystrey_box",
+        "price": 0.00
     }
 ]
