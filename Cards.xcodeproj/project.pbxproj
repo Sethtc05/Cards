@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E70224FA266762E60064B055 /* CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70224F9266762E60064B055 /* CardsApp.swift */; };
-		E70224FC266762E60064B055 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70224FB266762E60064B055 /* ContentView.swift */; };
+		E70224FC266762E60064B055 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70224FB266762E60064B055 /* Home.swift */; };
 		E70224FE266762E70064B055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70224FD266762E70064B055 /* Assets.xcassets */; };
 		E7022501266762E70064B055 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7022500266762E70064B055 /* Preview Assets.xcassets */; };
 		E73D1FD9266765EA0018BB2F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D1FD8266765EA0018BB2F /* Card.swift */; };
@@ -24,12 +24,14 @@
 		E7982C742685C28400CC0EDF /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7982C732685C28400CC0EDF /* Play.swift */; };
 		E7982C762685C37D00CC0EDF /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7982C752685C37D00CC0EDF /* Matrix.swift */; };
 		E7987E9B268819A500B33467 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7987E9A268819A500B33467 /* UserData.swift */; };
+		E7AA3E962A2C7E68004C4EFE /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = E7AA3E952A2C7E68004C4EFE /* users.json */; };
+		E7AA3E982A2C7F78004C4EFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA3E972A2C7F78004C4EFE /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E70224F6266762E60064B055 /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70224F9266762E60064B055 /* CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsApp.swift; sourceTree = "<group>"; };
-		E70224FB266762E60064B055 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E70224FB266762E60064B055 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		E70224FD266762E70064B055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7022500266762E70064B055 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7022502266762E70064B055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		E7982C732685C28400CC0EDF /* Play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
 		E7982C752685C37D00CC0EDF /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		E7987E9A268819A500B33467 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		E7AA3E952A2C7E68004C4EFE /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		E7AA3E972A2C7F78004C4EFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				E70224FD266762E70064B055 /* Assets.xcassets */,
 				E70224F9266762E60064B055 /* CardsApp.swift */,
 				E73D1FE42667675F0018BB2F /* cards.json */,
+				E7AA3E952A2C7E68004C4EFE /* users.json */,
 				E7022502266762E70064B055 /* Info.plist */,
 				E70224FF266762E70064B055 /* Preview Content */,
 			);
@@ -115,6 +120,7 @@
 				E73D1FD8266765EA0018BB2F /* Card.swift */,
 				E7765FD4266C5DC70033961F /* ListType.swift */,
 				E7987E9A268819A500B33467 /* UserData.swift */,
+				E7AA3E972A2C7F78004C4EFE /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,7 +128,7 @@
 		E73D1FE1266767050018BB2F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E70224FB266762E60064B055 /* ContentView.swift */,
+				E70224FB266762E60064B055 /* Home.swift */,
 				E73D1FE8266767C10018BB2F /* CardRow.swift */,
 				E73D1FEF26676AC60018BB2F /* CardDetail.swift */,
 				E73D1FF5266772040018BB2F /* CardList.swift */,
@@ -189,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AA3E962A2C7E68004C4EFE /* users.json in Resources */,
 				E73D1FE52667675F0018BB2F /* cards.json in Resources */,
 				E7022501266762E70064B055 /* Preview Assets.xcassets in Resources */,
 				E70224FE266762E70064B055 /* Assets.xcassets in Resources */,
@@ -205,11 +212,12 @@
 				E7987E9B268819A500B33467 /* UserData.swift in Sources */,
 				E782229E266B6497005525A6 /* Fetch.swift in Sources */,
 				E73D1FD9266765EA0018BB2F /* Card.swift in Sources */,
-				E70224FC266762E60064B055 /* ContentView.swift in Sources */,
+				E70224FC266762E60064B055 /* Home.swift in Sources */,
 				E73D1FF026676AC60018BB2F /* CardDetail.swift in Sources */,
 				E7982C762685C37D00CC0EDF /* Matrix.swift in Sources */,
 				E748FE042687326D00A9597E /* PlayView.swift in Sources */,
 				E70224FA266762E60064B055 /* CardsApp.swift in Sources */,
+				E7AA3E982A2C7F78004C4EFE /* User.swift in Sources */,
 				E73D1FE9266767C10018BB2F /* CardRow.swift in Sources */,
 				E7765FD5266C5DC70033961F /* ListType.swift in Sources */,
 				E73D1FF6266772040018BB2F /* CardList.swift in Sources */,
@@ -348,7 +356,7 @@
 				DEVELOPMENT_TEAM = KD4R4696HB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Cards/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,7 +378,7 @@
 				DEVELOPMENT_TEAM = KD4R4696HB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Cards/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -5,28 +5,166 @@ import SwiftUI
 // Example: Loading the card list, buying or selling cards or updating the current balance amount.
 
 class Fetch: ObservableObject {
-
+  
     // Name of files store in the applications document directory.
     private var cardsListFilename = "cards.json";
-    private var userDataFileName = "userData.json"
+    private var usersListFilename = "users.json";
+    private var userDataFilename = "userData.json";
 
     // All card lists and balance amount is saved as one overall 'UserData' object.
-    @Published private var userData: UserData
-    
+    @Published private var userData: UserData;
+    @Published private var currentUserIndex: Int = -1;
+    @Published private var isLoggedIn = false;
+   
     // Initialise (aka Create)
     init() {
+
+        userData = UserData.Create();
+        currentUserIndex = -1;
         
-        // Create a new user data object in memory for use.
-        userData = UserData.Create()
+        let dataLoaded = loadUserData(fileName: userDataFilename);
         
-        // Load any previously saved user data.
-        loadUserData(userDataFileName)
-        
-        // Are my collection and store card list both blank? If so we haven't loaded
-        // the cards into the application yet so do so now.
-        if (userData.collection.isEmpty && userData.store.isEmpty) {
-            initialseData()
+        if (dataLoaded == false) {
+            userData = initialseData();
         }
+    }
+    
+    // Initialise data will be called when no cards currently exist in memory or in the user data file.
+    // We need to load up the overall list of available cards into the application.
+    func initialseData() -> UserData {
+        
+        var userData = UserData.Create();
+        let users: [User] = loadDataFromFile(filename: usersListFilename)!;
+        let cards: [Card] = loadDataFromFile(filename: cardsListFilename)!;
+        
+        for i in users.indices {
+            var user = users[i];
+            user.store = cards;
+            userData.users.append(user);
+        }
+        
+        return userData;
+    }
+    
+    // Load any existing user data currently saved in the applications document directory.
+    func loadUserData(fileName: String) -> Bool {
+
+        // The file we are looking for.
+        var destinationFilename: URL
+        
+        do {
+            // Get me the user data file path please.
+            destinationFilename = getDocumentsDirectory().appendingPathComponent(fileName)
+            
+            // This helps to find out where the file is actually located so we can have a nosey and see whats inside it.
+            print("Loading user data file: \(destinationFilename)")
+            
+            // Hello Mr File Manager, does this file actually exist?
+            if FileManager.default.fileExists(atPath: destinationFilename.path) {
+                
+                // Cool, the file we are looking for is actually there so please load its contents.
+                let data = try Data(contentsOf: destinationFilename)
+                
+                // Oh but is this file empty?
+                if (!data.isEmpty) {
+                                        
+                    do {
+                        // No Sirree! it's there. Lets try load its contents in JSON format.
+                        userData = try JSONDecoder().decode(UserData.self, from: data)
+                        return true;
+                    } catch {
+                        // Yeah... the file is there but I don't know what is in it...
+                        print("Couldn't parse \(destinationFilename) \n \(error)")
+                    }
+                }
+            }
+        } catch {
+            // Something wrong man? Tell me all about it :)
+            print("Could not load user data file: \(destinationFilename)\n \(error)")
+        }
+        
+        return false;
+    }
+    
+    func loadDataFromFile<T: Decodable>(filename: String) -> [T]? {
+
+        do {
+            // Find the cards data file containing a list of all available possible cards to choose from.
+            guard let dataFile = Bundle.main.url(forResource: filename, withExtension: nil)
+            else {
+                // Opps! it failed to read the initial card list file. I guess the application is in trouble...
+                // The file may not be present. It is part of the project soooo :/ ?????
+                // we want to go KABOOM! if this isn't found because thats a big problem.
+                fatalError("Could not find \(filename) in main bundle.")
+            }
+            
+            // Success, we found the file we were looking for hooray!
+            let data = try Data(contentsOf: dataFile)
+            
+            // Oh, but is it empty?
+            if (!data.isEmpty) {
+                do {
+                    // Nope not empty, let try load the JSON data contained in it.
+                    return try JSONDecoder().decode([T].self, from: data)
+                    
+                } catch {
+                    // Umm.. the file isn't empty but what it contains might not be in JSON format.
+                    fatalError("Could not parse \(filename) \n \(error)")
+                }
+            }
+            
+        } catch {
+            // If anything goes wrong we would like to know about it in the output window please.
+            print("Could not load card list file: \(filename)\n \(error)")
+        }
+        
+        return nil;
+    }
+    
+    // Save any in memory user data into a file so we can read it later if the application is closed.
+    func saveUserData(data: UserData, fileName: String) {
+        
+        var destinationFilename: URL
+        
+        do {
+            // Get me the user data file path please.
+            destinationFilename = getDocumentsDirectory().appendingPathComponent(fileName)
+            
+            // This helps to find out where the file is actually located so we can have a nosey and see whats inside it.
+            print("Saving user data file: \(destinationFilename)")
+            
+            // Create or write to an existing file using JSON format.
+            let data = try JSONEncoder().encode(data)
+            
+            // Write to the file please.
+            try data.write(to: destinationFilename)
+            
+        } catch {
+            // Ah... well i'm be darned. What happened?
+            fatalError("Could not save user data file: \(destinationFilename)\n \(error)")
+        }
+    }
+    
+    func login(username: String, password: String) -> Bool {
+       
+        for i in userData.users.indices {
+            
+            let user = userData.users[i];
+            
+            if (user.username.caseInsensitiveCompare(username) == .orderedSame &&
+                user.password.caseInsensitiveCompare(password) == .orderedSame) {
+                currentUserIndex = i;
+                isLoggedIn = true;
+                return true;
+            }
+        }
+        
+        isLoggedIn = false;
+        return false;
+    }
+    
+    func logout() {
+        isLoggedIn = false;
     }
     
     // Buy a card - This involves several operations:
@@ -35,10 +173,13 @@ class Fetch: ObservableObject {
     //   3. Add the bought card to my collection.
     //   4. JSON encode the updated user data changes and write them to the user data file.
     func buy(_ card: Card) {
-        userData.balance -= card.price
-        userData.store = removeCard(card, userData.store)
-        userData.collection = addCard(card, userData.collection)
-        saveUserData(userData, userDataFileName)
+
+        if (isLoggedIn) {
+            userData.users[currentUserIndex].balance -= card.price;
+            userData.users[currentUserIndex].store = removeCard(card, userData.users[currentUserIndex].store);
+            userData.users[currentUserIndex].collection = addCard(card, userData.users[currentUserIndex].collection);
+            saveUserData(data: userData, fileName: userDataFilename);
+        }
     }
     
     // Sell a card - This involved several operations:
@@ -47,17 +188,20 @@ class Fetch: ObservableObject {
     //  3. Add the sold card to the stores card list.
     //  4. JSON encode the updated user data changes and write them to the user data file.
     func sell(_ card: Card) {
-        userData.balance += card.price
-        userData.collection = removeCard(card, userData.collection)
-        userData.store = addCard(card, userData.store)
-        saveUserData(userData, userDataFileName)
+        
+        if (isLoggedIn) {
+            userData.users[currentUserIndex].balance += card.price;
+            userData.users[currentUserIndex].collection = removeCard(card, userData.users[currentUserIndex].collection);
+            userData.users[currentUserIndex].store = addCard(card, userData.users[currentUserIndex].store);
+            saveUserData(data: userData, fileName: userDataFilename);
+        }
     }
     
     // Adjusts the balance amount when the user has won money.
     // JSON encode the updated user data changes and write them to the user data file.
     func adjustBalance(_ amount: Double) {
-        userData.balance += amount
-        saveUserData(userData, userDataFileName)
+        userData.users[currentUserIndex].balance += amount
+        saveUserData(data: userData, fileName: userDataFilename)
     }
     
     // Add a card to a specified card list and sort the list by name ascending.
@@ -81,116 +225,23 @@ class Fetch: ObservableObject {
         return paths[0]
     }
     
-    // Initialise data will be called when no cards currently exist in memory or in the user data file.
-    // We need to load up the overall list of available cards into the application.
-    func initialseData() {
-        do {
-            // Find the cards data file containing a list of all available possible cards to choose from.
-            guard let dataFile = Bundle.main.url(forResource: cardsListFilename, withExtension: nil)
-            else {
-                // Opps! it failed to read the initial card list file. I guess the application is in trouble...
-                // The file may not be present. It is part of the project soooo :/ ?????
-                // we want to go KABOOM! if this isn't found because thats a big problem.
-                fatalError("Could not find \(cardsListFilename) in main bundle.")
-            }
-            
-            // Success, we found the file we were looking for hooray!
-            let data = try Data(contentsOf: dataFile)
-            
-            // Oh, but is it empty?
-            if (!data.isEmpty) {
-                do {
-                    // Nope not empty, let try load the JSON data contained in it.
-                    userData.store = try JSONDecoder().decode([Card].self, from: data)
-                } catch {
-                    // Umm.. the file isn't empty but what it contains might not be in JSON format.
-                    fatalError("Could not parse \(cardsListFilename) \n \(error)")
-                }
-            }
-        } catch {
-            // If anything goes wrong we would like to know about it in the output window please.
-            print("Could not load card list file: \(cardsListFilename)\n \(error)")
-        }
-    }
-    
-    // Load any existing user data currently saved in the applications document directory.
-    func loadUserData(_ fileName: String) {
-        
-        // The file we are looking for.
-        var destinationFilename: URL
-        
-        do {
-            // Get me the user data file path please.
-            destinationFilename = getDocumentsDirectory().appendingPathComponent(fileName)
-            
-            // This helps to find out where the file is actually located so we can have a nosey and see whats inside it.
-            print("Loading user data file: \(destinationFilename)")
-            
-            // Hello Mr File Manager, does this file actually exist?
-            if FileManager.default.fileExists(atPath: destinationFilename.path) {
-                
-                // Cool, the file we are looking for is actually there so please load its contents.
-                let data = try Data(contentsOf: destinationFilename)
-                
-                // Oh but is this file empty?
-                if (!data.isEmpty) {
-                                        
-                    do {
-                        // No Sirree! it's there. Lets try load its contents in JSON format.
-                        userData = try JSONDecoder().decode(UserData.self, from: data)
-                    } catch {
-                        // Yeah... the file is there but I don't know what is in it...
-                        fatalError("Couldn't parse \(destinationFilename) \n \(error)")
-                    }
-                }
-            }
-        } catch {
-            // Something wrong man? Tell me all about it :)
-            print("Could not load user data file: \(destinationFilename)\n \(error)")
-        }
-    }
-    
-    // Save any in memory user data into a file so we can read it later if the application is closed.
-    func saveUserData(_ data: UserData, _ fileName: String) {
-        
-        var destinationFilename: URL
-        
-        do {
-            // Get me the user data file path please.
-            destinationFilename = getDocumentsDirectory().appendingPathComponent(fileName)
-            
-            // This helps to find out where the file is actually located so we can have a nosey and see whats inside it.
-            print("Saving user data file: \(destinationFilename)")
-            
-            // Create or write to an existing file using JSON format.
-            let data = try JSONEncoder().encode(data)
-            
-            // Write to the file please.
-            try data.write(to: destinationFilename)
-            
-        } catch {
-            // Ah... well i'm be darned. What happened?
-            fatalError("Could not save user data file: \(destinationFilename)\n \(error)")
-        }
-    }
-    
     func getCollection() -> [Card] {
-        return userData.collection.sort()
+        return userData.users[currentUserIndex].collection.sort()
     }
     
     func getStore() -> [Card] {
         
         var storeCards: [Card] = [];
         
-        for i in userData.store.indices {
+        for i in userData.users[currentUserIndex].store.indices {
             
-            if (userData.store[i].name == "Mystrey Box") {
-                var mystreyBox = userData.store[i];
-                mystreyBox.price = Double(userData.store.getTotal()) / Double(userData.store.count)
+            if (userData.users[currentUserIndex].store[i].name == "Mystrey Box") {
+                var mystreyBox = userData.users[currentUserIndex].store[i];
+                mystreyBox.price = Double(userData.users[currentUserIndex].store.getTotal()) / Double(userData.users[currentUserIndex].store.count)
                 storeCards.append(mystreyBox);
             }
             else {
-                storeCards.append(userData.store[i])
+                storeCards.append(userData.users[currentUserIndex].store[i])
             }
         }
         
@@ -198,6 +249,10 @@ class Fetch: ObservableObject {
     }
     
     func getBalance() -> Double {
-        return userData.balance
+        return userData.users[currentUserIndex].balance
+    }
+    
+    func isUserLoggedIn() -> Bool {
+        return isLoggedIn;
     }
 }

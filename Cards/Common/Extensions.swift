@@ -2,15 +2,14 @@ import SwiftUI
 
 extension View {
 
-    func textFieldAlert(isShowing: Binding<Bool>,
-                        text: Binding<String>,
-                        title: String) -> some View {
-        TextFieldAlert(isShowing: isShowing,
-                       text: text,
-                       presenting: self,
-                       title: title)
+    @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = false) -> some View {
+        if hidden {
+            self.hidden()
+        }
+        else {
+            self
+        }
     }
-
 }
 
 extension [Card] {

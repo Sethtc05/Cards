@@ -14,17 +14,19 @@ struct CardDetail: View {
     var body: some View {
         
         // Vertical stack (one on top of the other vertically)
-        VStack (spacing: 0) {
+        VStack {
             
             // Lets scroll down to see more
             ScrollView {
                 
                 // Shows the card image and some information about the selected card.
-                VStack (spacing: 0) {
+                VStack {
                     
                     Text(card.name)
                         .bold()
-                        .padding()
+                    
+                    Spacer()
+                        .frame(height: 15)
                     
                     Image(card.imageName)
                         .resizable()
@@ -32,13 +34,15 @@ struct CardDetail: View {
                         .frame(height: 350)
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth: 1))
+                        .stroke(Color.blue, lineWidth: 1))
                         .shadow(color: Color.black.opacity(0.6), radius: 6)
-                        .padding()
                         .offset(x: 0.0, y: self.offset)
                         .onAppear {
                             withAnimation(.easeOut(duration: 0.65)) { self.offset = 000.0 }
                         }
+                    
+                    Spacer()
+                        .frame(height: 5)
                     
                     Text(card.description)
                         .fixedSize(horizontal: false, vertical: true)
@@ -46,7 +50,16 @@ struct CardDetail: View {
                         .font(.callout)
                         .padding()
                 }
+
             }
+            
+            Text("Balance: \(fetch.getBalance(), specifier: "$%.2f")")
+                .foregroundColor(Color.blue)
+                .font(.system(size: 14))
+                .bold()
+            
+            Spacer()
+                .frame(height: 5)
             
             // A buy or sell button strectched out to fill the screen horizontally.
             GeometryReader { geometry in

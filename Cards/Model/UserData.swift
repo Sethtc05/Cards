@@ -4,11 +4,9 @@ import SwiftUI
 // Structure that represents a specific users saved data.
 struct UserData: Hashable, Codable {
     
-    var balance: Double
-    var store: [Card]
-    var collection: [Card]
+    var users: [User]
     
     static func Create() -> UserData {
-        return UserData(balance: 0.00, store: [Card](), collection: [Card]())
+        return UserData(users: [User]())
     }
 }
