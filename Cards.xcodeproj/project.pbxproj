@@ -11,6 +11,7 @@
 		E70224FC266762E60064B055 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70224FB266762E60064B055 /* Home.swift */; };
 		E70224FE266762E70064B055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70224FD266762E70064B055 /* Assets.xcassets */; };
 		E7022501266762E70064B055 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7022500266762E70064B055 /* Preview Assets.xcassets */; };
+		E703E7642A47F5670050283D /* TextFieldLimitModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E703E7632A47F5670050283D /* TextFieldLimitModifier.swift */; };
 		E73D1FD9266765EA0018BB2F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D1FD8266765EA0018BB2F /* Card.swift */; };
 		E73D1FE52667675F0018BB2F /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = E73D1FE42667675F0018BB2F /* cards.json */; };
 		E73D1FE9266767C10018BB2F /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D1FE8266767C10018BB2F /* CardRow.swift */; };
@@ -35,6 +36,7 @@
 		E70224FD266762E70064B055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7022500266762E70064B055 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7022502266762E70064B055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E703E7632A47F5670050283D /* TextFieldLimitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitModifier.swift; sourceTree = "<group>"; };
 		E73D1FD8266765EA0018BB2F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E73D1FE42667675F0018BB2F /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		E73D1FE8266767C10018BB2F /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
@@ -106,8 +108,8 @@
 		E719C02726882D4A00C3908B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E7982C752685C37D00CC0EDF /* Matrix.swift */,
 				E782229D266B6497005525A6 /* Fetch.swift */,
+				E7982C752685C37D00CC0EDF /* Matrix.swift */,
 				E7982C732685C28400CC0EDF /* Play.swift */,
 				E78500F92926202E0096FE8B /* Extensions.swift */,
 			);
@@ -134,6 +136,7 @@
 				E73D1FF5266772040018BB2F /* CardList.swift */,
 				E748FE032687326D00A9597E /* PlayView.swift */,
 				E78500F529261F7F0096FE8B /* TextFieldAlert.swift */,
+				E703E7632A47F5670050283D /* TextFieldLimitModifier.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				E73D1FF6266772040018BB2F /* CardList.swift in Sources */,
 				E7982C742685C28400CC0EDF /* Play.swift in Sources */,
 				E78500F629261F7F0096FE8B /* TextFieldAlert.swift in Sources */,
+				E703E7642A47F5670050283D /* TextFieldLimitModifier.swift in Sources */,
 				E78500FA2926202E0096FE8B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

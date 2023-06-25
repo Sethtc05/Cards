@@ -12,6 +12,7 @@ struct Home: View {
     @State private var currentUsername: String = "";
     @State private var currentPassword: String = "";
     @State private var incorrectLogin: Bool = false;
+    @State private var signingIn: Bool = false;
 
     // The main outer view of the application.
     // Three tabs: My Collection, Store and Play.
@@ -47,22 +48,37 @@ struct Home: View {
                         .font(.system(size: 12))
                     
                     TextField("Username", text: $currentUsername)
+                        .onChange(of: currentUsername) { text in signingIn = false; }
                         .padding(10)
                         .foregroundColor(Color.gray)
                         .disableAutocorrection(true)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .limitInputLength(value: $currentUsername, length: 30)
                     
                     SecureField("Password", text: $currentPassword)
+                        .onChange(of: currentPassword) { text in signingIn = false; }
                         .padding(10)
                         .foregroundColor(Color.gray)
                         .disableAutocorrection(true)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .limitInputLength(value: $currentPassword, length: 30)
                     
-                    if (incorrectLogin) {
+                    if (signingIn) {
+                        
+                        if (currentUsername.count < 1 || currentPassword.count < 1) {
+                            
+                            Label("No login details provided. Please try again.", systemImage: "exclamationmark.triangle")
+                                .foregroundColor(Color.red)
+                                .font(.system(size: 12))
+                        }
+                        
+                        else if (incorrectLogin) {
+                            
+                            Label("Incorrect login details. Please try again.", systemImage: "exclamationmark.triangle")
+                                .foregroundColor(Color.red)
+                                .font(.system(size: 12))
+                        }
 
-                        Label("Incorrect login details. Please try again.", systemImage: "exclamationmark.triangle")
-                            .foregroundColor(Color.red)
-                            .font(.system(size: 12))
                     }
                     
                     Spacer()
@@ -71,10 +87,17 @@ struct Home: View {
                     Button {
                         withAnimation {
                             
+                            signingIn = true;
+                            
+                            if (currentUsername.count < 1 || currentPassword.count < 1) {
+                                return;
+                            }
+                            
                             if (fetch.login(username: currentUsername, password: currentPassword)) {
                                 currentUsername = "";
                                 currentPassword = "";
                                 incorrectLogin = false;
+                                signingIn = false;
                                 return;
                             }
                             

@@ -10,6 +10,10 @@ extension View {
             self
         }
     }
+    
+    func limitInputLength(value: Binding<String>, length: Int) -> some View {
+        self.modifier(TextFieldLimitModifer(value: value, length: length))
+    }
 }
 
 extension [Card] {
