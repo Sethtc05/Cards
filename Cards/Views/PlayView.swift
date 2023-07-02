@@ -5,6 +5,7 @@ import SwiftUI
 struct PlayView: View {
     
     @ObservedObject var play: Play // The function behind the scence.
+    
     @State private var showingWinAlert = false // Did we win? Let the user know.
     @State private var winAmount = 0.00 // We haven't won anything yet! let's play first.
     

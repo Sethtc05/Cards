@@ -4,7 +4,7 @@ import SwiftUI
 // A little game of 'spin to win' to earn more money to buy cards with.
 
 class Play: ObservableObject  {
-    
+       
     @Published var board: Matrix<PlayOption> // The game board made up of a prize (money).
     @Published var columns: Int
     @Published var rows: Int
@@ -37,24 +37,21 @@ class Play: ObservableObject  {
         inactiveForegroundColor = Color(UIColor(red: 0.4667, green: 0.4667, blue: 0.4667, alpha: 1.0)) // blackish RGB
         winFunc = { balance in print("Win \(balance)!") } // If what happens when the user wins isn't setup then please let me know.
         
-        // Set me up a play board with 3 columns and 5 rows please :)
-        let columnCount = 3
-        let rowCount = 5
-        
-        columns = columnCount
-        rows = rowCount
+       // Set me up a play board with 3 columns and 5 rows please :)
+        columns = Constants.Play.ColumnCount
+        rows = Constants.Play.RowCount
         
         // Build the play board.
         board = Matrix(
-            rows: rowCount,
-            columns: columnCount,
+            rows: Constants.Play.RowCount,
+            columns: Constants.Play.ColumnCount,
             defaultValue: PlayOption(
                 value: 0.00,
                 backgroundColor: inactiveBackgroundColor,
                 foregroundColor: inactiveForegroundColor))
 
         // Give the play board some money options.
-        generateValues(col: columnCount, row: rowCount)
+        generateValues(col: Constants.Play.ColumnCount, row: Constants.Play.RowCount)
     }
     
     // Create the play board with a specified number of columns and rows.

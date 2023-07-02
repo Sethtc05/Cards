@@ -4,15 +4,21 @@ struct TextFieldAlert<Presenting>: View where Presenting: View {
 
     @Binding var isShowing: Bool
     @Binding var text: String
+    
     let presenting: Presenting
     let title: String
 
     var body: some View {
+        
         GeometryReader { (deviceSize: GeometryProxy) in
+            
             ZStack {
+                
                 self.presenting
                     .disabled(isShowing)
+                
                 VStack {
+                    
                     Text(self.title)
                         .foregroundColor(Color.black)
                     
@@ -21,11 +27,15 @@ struct TextFieldAlert<Presenting>: View where Presenting: View {
                         .disableAutocorrection(true)
                     
                     Divider()
+                    
                     HStack {
+                        
                         Button(action: {
+                            
                             withAnimation {
                                 self.isShowing.toggle()
                             }
+                            
                         }) {
                             Text("OK")
                         }

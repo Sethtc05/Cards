@@ -6,11 +6,6 @@ import SwiftUI
 
 class Fetch: ObservableObject {
   
-    // Name of files store in the applications document directory.
-    private var cardsListFilename = "cards.json";
-    private var usersListFilename = "users.json";
-    private var userDataFilename = "userData.json";
-
     // All card lists and balance amount is saved as one overall 'UserData' object.
     @Published private var userData: UserData;
     @Published private var currentUserIndex: Int = -1;
@@ -22,7 +17,7 @@ class Fetch: ObservableObject {
         userData = UserData.Create();
         currentUserIndex = -1;
         
-        let dataLoaded = loadUserData(fileName: userDataFilename);
+        let dataLoaded = loadUserData(fileName: Constants.Fetch.UserDataFilename);
         
         if (dataLoaded == false) {
             userData = initialseData();
@@ -34,8 +29,8 @@ class Fetch: ObservableObject {
     func initialseData() -> UserData {
         
         var userData = UserData.Create();
-        let users: [User] = loadDataFromFile(filename: usersListFilename)!;
-        let cards: [Card] = loadDataFromFile(filename: cardsListFilename)!;
+        let users: [User] = loadDataFromFile(filename: Constants.Fetch.UsersListFilename)!;
+        let cards: [Card] = loadDataFromFile(filename: Constants.Fetch.CardsListFilename)!;
         
         for i in users.indices {
             var user = users[i];
@@ -178,7 +173,7 @@ class Fetch: ObservableObject {
             userData.users[currentUserIndex].balance -= card.price;
             userData.users[currentUserIndex].store = removeCard(card, userData.users[currentUserIndex].store);
             userData.users[currentUserIndex].collection = addCard(card, userData.users[currentUserIndex].collection);
-            saveUserData(data: userData, fileName: userDataFilename);
+            saveUserData(data: userData, fileName: Constants.Fetch.UserDataFilename);
         }
     }
     
@@ -193,7 +188,7 @@ class Fetch: ObservableObject {
             userData.users[currentUserIndex].balance += card.price;
             userData.users[currentUserIndex].collection = removeCard(card, userData.users[currentUserIndex].collection);
             userData.users[currentUserIndex].store = addCard(card, userData.users[currentUserIndex].store);
-            saveUserData(data: userData, fileName: userDataFilename);
+            saveUserData(data: userData, fileName: Constants.Fetch.UserDataFilename);
         }
     }
     
@@ -201,7 +196,7 @@ class Fetch: ObservableObject {
     // JSON encode the updated user data changes and write them to the user data file.
     func adjustBalance(_ amount: Double) {
         userData.users[currentUserIndex].balance += amount
-        saveUserData(data: userData, fileName: userDataFilename)
+        saveUserData(data: userData, fileName: Constants.Fetch.UserDataFilename)
     }
     
     // Add a card to a specified card list and sort the list by name ascending.
