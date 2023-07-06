@@ -1,4 +1,5 @@
 import Foundation
+import SwiftyJSON
 import SwiftUI
 
 // A helper class used for all file reading and writing operations.
@@ -94,13 +95,18 @@ class Fetch: ObservableObject {
             }
             
             // Success, we found the file we were looking for hooray!
-            let data = try Data(contentsOf: dataFile)
+            let jsonData = try Data(contentsOf: dataFile)
             
             // Oh, but is it empty?
-            if (!data.isEmpty) {
+            if (!jsonData.isEmpty) {
                 do {
+                    
+                    let json = try JSON(data: jsonData)
+                    
+                    return (json as? T as! [T])
+                    
                     // Nope not empty, let try load the JSON data contained in it.
-                    return try JSONDecoder().decode([T].self, from: data)
+                    //return try JSONDecoder().decode([T].self, from: data)
                     
                 } catch {
                     // Umm.. the file isn't empty but what it contains might not be in JSON format.
